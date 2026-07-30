@@ -93,8 +93,8 @@ Legenda: **F** fundação herdada, **I** implementado nesta entrega, **P** plane
 
 ## 9. Campanhas e relacionamento
 
-- **P** Segmentos dinâmicos por tags, jornada, agenda e consentimento.
-- **P** Campanhas template-based, variáveis e tracking.
+- **I** Segmentos por tags e consentimento explícito de marketing.
+- **I** Campanhas com rascunho, agendamento, lote, idempotência e tracking operacional.
 - **P** Reengajamento e retorno preventivo sem inferência clínica indevida.
 - **P** Conteúdo editorial e social inspirado no WalChat.
 - **G** Opt-out imediato, finalidade compatível e bloqueio por canal.
@@ -123,7 +123,8 @@ Legenda: **F** fundação herdada, **I** implementado nesta entrega, **P** plane
 - **F** Alertas operacionais e central de incidentes.
 - **P** Busca global com escopo e autorização por resultado.
 - **P** Command palette e atalhos de teclado.
-- **P** Notificações in-app, e-mail, WhatsApp e push por preferência.
+- **I** Preferências persistidas para in-app, e-mail e WhatsApp.
+- **P** Entrega e push por provedor externo.
 - **P** Tarefas, lembretes, menções e comentários internos.
 - **G** Notificação não pode revelar dado clínico na tela bloqueada.
 
@@ -167,7 +168,7 @@ Legenda: **F** fundação herdada, **I** implementado nesta entrega, **P** plane
 
 - **I** Design system persistente com densidade de operação e motion sutil.
 - **I** Foco visível, labels, tipos de input e tabelas com overflow.
-- **P** Layout responsivo mobile/tablet/desktop.
+- **I** Shell responsivo mobile/tablet/desktop, menu em drawer e alvos de toque.
 - **P** Modo essencial e dark theme.
 - **P** Preferências de acessibilidade por usuário.
 - **G** WCAG 2.2 AA, teclado completo, axe e teste com leitores de tela.
@@ -177,6 +178,7 @@ Legenda: **F** fundação herdada, **I** implementado nesta entrega, **P** plane
 - **F** Docker, self-host, baseline, workers e atualização assistida.
 - **P** SaaS gerenciado com ambientes dev/staging/prod.
 - **P** Feature flags, rollout por tenant e migração reversível de aplicação.
-- **P** Runbooks, SLOs, on-call e status page.
+- **I** Runbook de deploy, backup, restore, rotação e incidente.
+- **P** SLOs, on-call e status page pública.
 - **G** CI único: typecheck, lint, unit, DB install/update, RLS, E2E e visual.
 

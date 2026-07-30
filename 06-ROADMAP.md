@@ -3,19 +3,20 @@
 Roadmap orientado a gates. Datas dependem de equipe, validação com clínicas,
 provedores e decisões regulatórias; “concluído” exige evidência executável.
 
-## Onda 0 — fundação e reconciliação
+## Marco 0.9 — Beta-Final
 
-Estado: **iniciada nesta entrega**
+Estado: **entregue para homologação**
 
 - Clonar, fixar commits, licenças e inventários.
-- Criar base Medify com atribuição.
+- Criar base Medify com atribuição e versão reproduzível.
 - Reconciliar documentação upstream com código real.
 - Persistir design system.
 - Rebrand técnico e remover vazamentos de marca na superfície.
 - Criar CI que realmente cobre typecheck, lint, unit, DB e secrets.
-- Fechar rate limiting mínimo.
+- Fechar rate limiting mínimo e dependências conhecidas.
 
-Saída: instalação dev reproduzível, threat model e nenhum segredo conhecido.
+Saída: instalação de produção reproduzível, plataforma integrada, documentação,
+threat model e nenhum segredo conhecido no código.
 
 ## Onda 1 — identidade clínica, pacientes e unidades
 
@@ -25,7 +26,7 @@ Saída: instalação dev reproduzível, threat model e nenhum segredo conhecido.
 - Cadastro/importação e portal mínimo.
 - Consentimentos e finalidade.
 
-Já entregue: tabelas base, API e tela inicial de pacientes.
+Já entregue: tabelas base, API, tela de pacientes, importação e credenciamento.
 
 Gate: isolamento recepção × clínico demonstrado em teste de banco.
 
@@ -38,7 +39,7 @@ Gate: isolamento recepção × clínico demonstrado em teste de banco.
 - Lembretes e no-show workflows.
 - Calendar adapters.
 
-Já entregue: agendamento simples e consulta de 14 dias.
+Já entregue: agendamento simples, detecção inicial de conflito e consulta de 14 dias.
 
 Gate: concorrência transacional, fuso, idempotência e E2E de reagendamento.
 
@@ -53,6 +54,9 @@ Gate: concorrência transacional, fuso, idempotência e E2E de reagendamento.
 
 Gate: compliance por canal, webhook replay e carga de mensagens.
 
+Já entregue: inbox WAHA, atribuição, mídia, templates, funis, campanhas por tags,
+consentimento e processamento em lotes.
+
 ## Onda 4 — prontuário e documentos
 
 - Editor estruturado e templates versionados.
@@ -61,7 +65,8 @@ Gate: compliance por canal, webhook replay e carga de mensagens.
 - Atestados, encaminhamentos e solicitações/resultados.
 - Justificativa de leitura e break-glass.
 
-Já entregue: schema e RLS iniciais, imutabilidade de registro assinado.
+Já entregue: schema, RLS, leitura justificada, criação de rascunho, assinatura
+MFA com hash, imutabilidade e auditoria.
 
 Gate: validação jurídica/CFM/SBIS, pentest clínico e restore.
 
@@ -126,14 +131,14 @@ Gate: SLO, runbooks, suporte, contrato, DPA e rollout controlado.
 
 ## Próximo backlog recomendado
 
-1. Corrigir erros de typecheck introduzidos/herdados e fixar gate único.
-2. Teste DB da migration 0096 em instalação e reaplicação.
-3. Invariant test: recepção não lê prontuário; clínico autorizado lê.
-4. Constraint de conflito de agenda e update/cancelamento.
-5. Unidades, profissionais e seleção na agenda.
-6. Detalhe do paciente com timeline operacional.
-7. Remover/desativar Nuvemshop da navegação, onboarding e seeds Medify.
-8. Reconciliar rate limiting em todas as rotas públicas.
-9. Secret scanning e rotação da credencial exposta.
-10. Prototipar prontuário somente depois dos gates 1–4.
+1. Homologar restore completo e RPO/RTO em staging.
+2. Executar pentest independente e teste de isolamento RLS em banco real.
+3. Constraint transacional de conflito e fluxos de reagendamento/cancelamento.
+4. Unidades, profissionais, salas e recorrência na agenda.
+5. Documentos clínicos, adendos e assinatura qualificada.
+6. Adapter oficial Meta Cloud API e provedores de e-mail/SMS.
+7. Financeiro, billing SaaS e integrações de pagamento.
+8. E2E Playwright dos percursos root, gestor, recepção e clínico.
+9. Homologação LGPD/CFM/SBIS e contratos de suboperadores.
+10. Piloto fechado com clínicas, telemetria, correções e gate para 1.0 GA.
 

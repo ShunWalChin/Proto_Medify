@@ -79,18 +79,23 @@ governada, evidência, trilha de auditoria e transferência clara para pessoas.
 - Marketplace clínico aberto.
 - Microserviços por módulo.
 
-## Estado atual
+## Estado atual — 0.9 Beta-Final
 
-Esta entrega cria a fundação, não declara o SaaS concluído:
+Esta entrega disponibiliza um MVP integrado para homologação:
 
 - seis repositórios clonados e indexados;
-- grafo consolidado com 77.209 entidades e 199.509 relações;
+- grafo consolidado e atualizado com código, documentação e repositórios de referência;
 - dossiê comparativo e catálogo funcional;
 - base Medify derivada de código MIT;
 - design system persistente;
-- schema clínico inicial e APIs de pacientes/agenda;
-- telas iniciais navegáveis;
-- gates regulatórios e roadmap definidos.
+- schema clínico, pacientes, agenda e prontuário com assinatura MFA;
+- CRM, inbox, campanhas, importação, automações, IA e administração integrados;
+- self-host isolado, migrations, bootstrap, health checks e runbook;
+- gates regulatórios, evidências de teste e roadmap definidos.
+
+O rótulo Beta-Final é intencional: o produto pode ser demonstrado e operado com
+dados fictícios, mas não substitui homologação jurídica, pentest independente,
+restore comprovado e validação com clínicas antes do uso assistencial ou revenda.
 
 ## Métricas norte
 
