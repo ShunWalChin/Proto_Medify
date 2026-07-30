@@ -22,6 +22,10 @@
 | Auditoria | Consulta, detalhe e exportação | `/app/audit`, `/admin/audit` | Entregue |
 | Plataforma | Tenants, usuários, uso, incidentes e saúde | `/admin` | Entregue |
 | WhatsApp | Sessões, QR, reconexão e webhooks WAHA | `/app/connections` | Requer pareamento |
+| Social/Instagram | Conta Meta, webhook, DM, comentários e story | `/app/social`, inbox | Incorporação obrigatória pendente |
+| Conteúdo social | Calendário, Feed, Reel, Story e Carrossel | `/app/social/content` | Incorporação obrigatória pendente |
+| Social automation | Gatilhos, sequências, reengajamento e auto-like | `/app/social` | Incorporação obrigatória pendente |
+| Social insights | Alcance, heatmap, top posts e análise IA | `/app/social/insights` | Incorporação obrigatória pendente |
 | API/MCP | Tokens com escopo, API v1 e ferramentas MCP | `/app/settings/api-tokens`, `/api/mcp` | Entregue |
 
 ## Dependências entre módulos
@@ -50,3 +54,7 @@ flowchart TD
 presente. Integrações marcadas “requer provedor” dependem de credencial/contrato
 externo. “Beta controlada” exige os gates explicitados na documentação de
 segurança antes de uso assistencial real.
+
+“Incorporação obrigatória pendente” identifica funcionalidade existente no
+WalChat que deve ser portada para dentro do MEDIFY. Não significa integração
+externa nem capacidade já entregue.

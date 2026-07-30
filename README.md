@@ -37,6 +37,7 @@ repositório público**. Os acessos de homologação são entregues por canal se
 
 - produto, personas, jornadas, regras e modelo comercial;
 - frontend, backend, APIs, workers, eventos e integrações;
+- incorporação nativa integral do WalChat no código MEDIFY;
 - banco, migrations, RLS, tenancy e domínio clínico;
 - RBAC, MFA, LGPD, threat model e resposta a incidentes;
 - deploy Oracle, Docker, Nginx, Supabase, Redis e WAHA;

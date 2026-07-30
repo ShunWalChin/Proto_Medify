@@ -107,9 +107,12 @@ dois testes no clone analisado.
 
 ### Decisão Medify
 
-Portar o modelo conceitual de compliance, cooldown, blocklist, sequências,
-reengajamento e conteúdo. Implementar como adapters/event consumers, sem adotar
-outro framework web.
+Absorver integralmente as funcionalidades do WalChat no código MEDIFY. O código é
+portado para o monólito Next.js, reutilizando tenant, contatos, inbox, agentes,
+campanhas, follow-ups, event log, workers e design system canônicos. Não haverá
+aplicação WalChat externa, iframe, segundo banco, segundo login ou deploy
+dependente. TanStack/BullMQ não são incorporados como segunda fundação; seu
+comportamento é traduzido para as fronteiras MEDIFY.
 
 ## 3. wacrm
 

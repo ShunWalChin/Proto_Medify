@@ -5,7 +5,7 @@
 | Fonte | Conhecimento aproveitado | Evidência MEDIFY |
 |---|---|---|
 | `fat-tech-impulse-crm` | base operacional, CRM e estrutura SaaS | contatos, pipelines, app shell |
-| `WalChat` | WhatsApp, comunicação, conteúdo e evolução | inbox, sessões, WAHA, templates |
+| `WalChat` | Instagram, inbox, compliance, gatilhos, sequências, conteúdo e insights | incorporação nativa integral conforme matriz WalChat |
 | `wacrm` | API v1, RBAC, webhooks, broadcasts | auth, tokens, rotas e campanhas |
 | `ui-ux-pro-max-skill` | tokens, UX, acessibilidade e responsividade | design system e shell mobile |
 | `ponytail` | padrões de organização e experiência | referências de produto/estrutura |
@@ -29,6 +29,7 @@ Detalhes de licença e commit de referência estão em
 | Segurança | MFA, RBAC, audit, secrets | suíte, audit de dependências, headers |
 | Deploy | Compose/Nginx/scripts | health e containers saudáveis |
 | Documentação | documentos canônicos + inventários | este repositório e Graphify |
+| Paridade WalChat | matriz funcional e fases W1–W6 | gate 100% antes de conclusão |
 
 ## Status
 

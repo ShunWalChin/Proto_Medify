@@ -57,6 +57,25 @@ Gate: compliance por canal, webhook replay e carga de mensagens.
 Já entregue: inbox WAHA, atribuição, mídia, templates, funis, campanhas por tags,
 consentimento e processamento em lotes.
 
+## Onda 3A — incorporação nativa integral do WalChat
+
+Estado: **obrigatória; paridade ainda não concluída**
+
+- Estender o domínio canônico para contas/canais Instagram.
+- Portar webhook Meta challenge, HMAC e normalização de eventos.
+- Incorporar compliance 24h/7d, STOP/PARAR, cooldown, blocklist e Private Reply.
+- Portar gatilhos comentário/DM/story e sequências texto/mídia/typing/delay.
+- Integrar reengajamento ao motor de campanhas/follow-ups.
+- Criar dashboard social, calendário editorial e publicação
+  Feed/Reel/Story/Carrossel.
+- Portar auto-like, coleta de insights, heatmap, top posts e análise por IA.
+- Integrar privacidade, termos e data deletion ao módulo LGPD.
+- Migrar testes/smoke e oferecer importador one-shot de instalações WalChat.
+- Desativar a necessidade do runtime, banco, auth e deploy WalChat separados.
+
+Gate: matriz WalChat 100%, Meta Live Mode em piloto, RLS/HMAC/idempotência verdes
+e comprovação de um único código, login, tenant, banco, UI e deploy.
+
 ## Onda 4 — prontuário e documentos
 
 - Editor estruturado e templates versionados.

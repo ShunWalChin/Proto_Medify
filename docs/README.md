@@ -17,6 +17,7 @@ estado do produto; inventários em `reference/generated` são derivados do códi
 
 - [Arquitetura](../03-ARCHITECTURE.md) — canônico.
 - [Contexto, containers e fluxos](architecture/SYSTEM-AND-FLOWS.md).
+- [Incorporação nativa e integral do WalChat](architecture/WALCHAT-NATIVE-ABSORPTION.md).
 - [Frontend](architecture/FRONTEND.md).
 - [Backend, eventos e workers](architecture/BACKEND-EVENTS-WORKERS.md).
 - [Domínio e dados](../04-DOMAIN-AND-DATA.md) — canônico.

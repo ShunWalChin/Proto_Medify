@@ -41,7 +41,7 @@ Legenda: **F** fundação herdada, **I** implementado nesta entrega, **P** plane
 - **F** Texto, imagem, documento, áudio, notas e templates.
 - **F** Múltiplas conexões WAHA, QR, health e reconnect.
 - **P** Adapter para Meta Cloud API oficial.
-- **P** Instagram DM/comentários/story usando padrões WalChat.
+- **P** Instagram DM/comentários/story por incorporação nativa integral do WalChat.
 - **P** E-mail, chat web, telefone/voz e SMS.
 - **P** Histórico único por pessoa, canal e contexto.
 - **G** HMAC, idempotência, opt-out, janela e política por provedor.
@@ -96,8 +96,29 @@ Legenda: **F** fundação herdada, **I** implementado nesta entrega, **P** plane
 - **I** Segmentos por tags e consentimento explícito de marketing.
 - **I** Campanhas com rascunho, agendamento, lote, idempotência e tracking operacional.
 - **P** Reengajamento e retorno preventivo sem inferência clínica indevida.
-- **P** Conteúdo editorial e social inspirado no WalChat.
+- **P** Conteúdo editorial e social portado integralmente do WalChat.
 - **G** Opt-out imediato, finalidade compatível e bloqueio por canal.
+
+## 9A. WalChat nativo
+
+- **F** Tenant, contatos, tags, inbox, agentes, campanhas, follow-ups e event log
+  canônicos já fornecem a fundação.
+- **P** Dashboard social com alcance, DMs, comentários, contatos e atividade.
+- **P** Inbox Instagram com Principal, Geral, Pedidos, janela Meta e IA off.
+- **P** Gatilhos por comentário, DM, story, palavra-chave e modo de match.
+- **P** Sequências com texto, mídia, typing, delays, enrollments e cooldowns.
+- **P** Reengajamento com elegibilidade, preview e limite de taxa.
+- **P** Calendário editorial mensal/semanal.
+- **P** Criação e publicação de Feed, Reel, Story e Carrossel.
+- **P** Auto-like por regra, sentimento e palavra-chave.
+- **P** Insights, crescimento, heatmap, top posts e leitura por IA.
+- **P** Conta Instagram por tenant, OAuth/token cifrado e permissões.
+- **P** Webhook Meta challenge/HMAC, eventos e data deletion signed request.
+- **P** Compliance 24h, `HUMAN_AGENT` 7d, STOP/PARAR, blocklist e Private Reply.
+- **G** Tudo opera dentro do MEDIFY: mesmo código, login, tenant, banco, UI,
+  eventos, workers, observabilidade e deploy.
+- **G** Nenhum iframe, segunda aplicação, API WalChat em runtime ou banco externo.
+- **G** Paridade funcional e testes WalChat 100% antes de declarar concluído.
 
 ## 10. Financeiro
 

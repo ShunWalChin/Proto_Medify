@@ -52,6 +52,19 @@ flowchart LR
 - `privacy`: direitos, retenção, export, anonimização e incidente.
 - `platform`: planos, limites, tenants, suporte e observabilidade.
 
+## WalChat é código nativo, não integração externa
+
+Todas as funcionalidades do WalChat serão absorvidas pelo monólito modular
+MEDIFY. Instagram, conteúdo editorial, gatilhos, sequências, reengajamento,
+auto-like, insights e compliance Meta usam os módulos, tenant, banco, UI, eventos
+e workers do MEDIFY.
+
+O WalChat não será mantido como segundo frontend, API, banco, autenticação, fila
+ou deploy. Seu código é portado para módulos `social` e convergido com contatos,
+inbox, agentes, campanhas e follow-ups canônicos. A matriz e o plano de
+incorporação estão em
+[`docs/architecture/WALCHAT-NATIVE-ABSORPTION.md`](docs/architecture/WALCHAT-NATIVE-ABSORPTION.md).
+
 ## Fluxo de entrada omnichannel
 
 ```mermaid
@@ -173,4 +186,6 @@ Ambientes separados e contas separadas. Produção exige:
 8. n8n orquestra integrações; não contém regra clínica canônica.
 9. IA propõe; policy e domínio autorizam.
 10. Docs Medify e migrations são fonte de verdade; handoffs upstream são referência.
+11. WalChat é integralmente incorporado ao código MEDIFY; nenhum runtime WalChat
+    externo participa da arquitetura final.
 

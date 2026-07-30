@@ -84,3 +84,16 @@ credenciais e detalhes secretos permanecem em secret store/canal controlado.
 **Motivo:** transparência e onboarding sem ampliar superfície de ataque.
 
 **Consequência:** comandos usam nomes de variáveis e caminhos, nunca valores reais.
+
+## ADR-011 — WalChat integralmente absorvido
+
+**Decisão:** portar todas as funcionalidades WalChat para módulos nativos do
+MEDIFY. Não manter frontend, API, banco, autenticação, fila ou deploy WalChat em
+runtime.
+
+**Motivo:** experiência única, identidade canônica, transações locais, RLS
+uniforme, menor carga operacional e evolução conjunta do SaaS.
+
+**Consequência:** o comportamento TanStack/BullMQ é traduzido para Next.js,
+event log e workers MEDIFY. Entidades duplicadas são convergidas; apenas extensões
+sociais novas entram no schema. A matriz de paridade é gate obrigatório.

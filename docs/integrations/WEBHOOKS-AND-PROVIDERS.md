@@ -19,6 +19,29 @@ Eventos ficam consultáveis por source e podem ser reprocessados quando seguro.
 Coberto em [WhatsApp e WAHA](WHATSAPP-WAHA.md). Há endpoint atual e rota
 tokenizada para compatibilidade/isolamento.
 
+## Meta/Instagram nativo
+
+A API da Meta continua sendo um provedor externo, mas o produto WalChat não é
+uma dependência, serviço ou aplicação externa. Todas as capacidades de
+Instagram do WalChat são portadas para módulos nativos do MEDIFY e usam o mesmo
+login, tenant, banco, RLS, auditoria, workers, design system e deploy.
+
+O adapter Meta/Instagram deve:
+
+- executar OAuth e armazenar tokens cifrados por organização;
+- validar o challenge de configuração e a assinatura HMAC SHA-256 sobre o corpo
+  bruto do webhook;
+- deduplicar mensagens, postbacks, comentários, menções e reações;
+- normalizar eventos no domínio canônico de contatos, conversas e interações;
+- aplicar, no momento do envio, janela de 24 horas, tag `HUMAN_AGENT`, opt-out,
+  blocklist, cooldown e limite de resposta privada;
+- registrar a decisão de elegibilidade e sua justificativa na auditoria;
+- publicar Feed, Reel, Story e Carrossel apenas por jobs idempotentes;
+- isolar credenciais, quotas, conteúdo e métricas por organização.
+
+Não é permitido introduzir iframe, proxy para outra aplicação, segundo login,
+segundo banco de negócio, runtime WalChat ou deploy independente.
+
 ## Nuvemshop
 
 O código herdado contém OAuth/callback, webhooks de negócio e endpoints LGPD do
@@ -46,7 +69,7 @@ consulta cross-tenant.
 
 | Adapter | Estado | Requisitos |
 |---|---|---|
-| Meta Cloud API | Planejado | App Meta, templates, webhook/HMAC |
+| Meta/Instagram Graph API | Incorporação nativa obrigatória | App Meta, OAuth, permissões, revisão, webhook/HMAC e jobs |
 | E-mail transacional | Planejado | domínio, SPF/DKIM/DMARC, DPA |
 | SMS | Planejado | provedor, opt-in e custo |
 | Calendar | Planejado | OAuth, fuso e conflito |

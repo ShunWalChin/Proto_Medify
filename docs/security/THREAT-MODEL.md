@@ -7,7 +7,7 @@ Ativos principais:
 - identidade, sessão e fatores MFA;
 - dados pessoais e dados de saúde;
 - prontuários assinados e anexos;
-- credenciais de WhatsApp/IA/provedores;
+- credenciais de WhatsApp, Meta/Instagram, IA e demais provedores;
 - eventos, auditoria e evidência;
 - disponibilidade de atendimento e agenda;
 - isolamento entre organizações.
@@ -37,7 +37,10 @@ minimização e observabilidade proporcionais.
 | Escalada por papel | Ação indevida | `requireRole`, ranks, audit | Revisão periódica de permissões |
 | Admin lê saúde | Violação clínica | assignment clínico separado | Pentest clínico |
 | Sequestro de sessão | Conta comprometida | cookies, TLS, MFA privilegiado | Sessão curta e device/risk signals |
-| Webhook falso/replay | Mensagem/ação forjada | token, external ID, idempotência | HMAC/timestamp por provedor |
+| Webhook falso/replay | Mensagem/ação forjada | token, external ID, idempotência | Meta HMAC no raw body, timestamp e nonce por provedor |
+| Token Meta exfiltrado | Tomada de conta social | segredo server-side e tenant | Criptografia por envelope, rotação e revogação |
+| Automação fora da janela | Bloqueio Meta e comunicação indevida | elegibilidade e cooldown | Revalidação atômica no worker e auditoria da decisão |
+| Publicação social duplicada | Conteúdo e dano reputacional | job e chave idempotente | Reconciliação com ID remoto e chaos test |
 | SSRF em URL/fonte RAG | Acesso à rede interna | validação/allowlist prevista | Egress proxy e testes dedicados |
 | Prompt injection | Tool/data exfiltration | separação conteúdo/instrução, tool gate | Red-team e políticas por tool |
 | Segredo em log | Comprometimento | env server-side, redaction | Secret scanning contínuo |

@@ -37,6 +37,8 @@ Senhas são temporárias, geradas no servidor e não pertencem ao repositório.
 ## Limites honestos da beta
 
 - WhatsApp real exige pareamento por QR e telefone autorizado.
+- A fundação compartilhada do WalChat existe, mas a paridade Instagram, conteúdo
+  e insights ainda não foi integralmente portada para o código MEDIFY.
 - IA/RAG/transcrição exigem credenciais dos respectivos provedores.
 - E-mail, Meta Cloud API, calendários, pagamentos e assinatura qualificada
   dependem de contratação/configuração externa.
@@ -46,4 +48,5 @@ Senhas são temporárias, geradas no servidor e não pertencem ao repositório.
 ## Gate para 1.0 GA
 
 Piloto fechado, correção dos achados, E2E de jornadas críticas, DR ensaiado,
-SLO/alertas, termos/contratos, billing e aceite formal de segurança e LGPD.
+SLO/alertas, termos/contratos, billing, paridade WalChat nativa e aceite formal
+de segurança e LGPD.

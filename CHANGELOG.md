@@ -1,5 +1,11 @@
 # Changelog documental
 
+## Não publicado
+
+- torna obrigatória a incorporação nativa e integral do WalChat;
+- define matriz de paridade, mapeamento de dados, layout de código e fases W1–W6;
+- proíbe dependência runtime de frontend, API, banco, auth ou deploy WalChat.
+
 ## 0.9.0-beta.0 — 2026-07-30
 
 - documentação integral de produto, arquitetura, dados e segurança;

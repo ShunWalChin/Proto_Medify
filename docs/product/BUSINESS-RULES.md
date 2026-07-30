@@ -54,6 +54,24 @@ incorreta mesmo que a interface aparente funcionar.
 4. Template e variáveis são validados antes do lote.
 5. Um destinatário aparece no máximo uma vez por campanha.
 
+## Instagram e automação social
+
+1. Evento Meta inbound é aceito somente após challenge/assinatura válida,
+   deduplicação e resolução da organização proprietária da conta.
+2. Mensagem automática padrão só pode sair dentro da janela de 24 horas.
+3. A tag `HUMAN_AGENT` admite atendimento humano até sete dias e nunca autoriza
+   automação.
+4. `STOP`, `PARAR`, opt-out, blocklist e revogação de consentimento prevalecem
+   sobre gatilho, sequência, campanha, IA ou reengajamento.
+5. Um comentário pode originar no máximo uma resposta privada elegível.
+6. Cooldown e limites da Meta são revalidados imediatamente antes de cada envio.
+7. Cada decisão de envio ou bloqueio registra regra, janela, ator e correlação.
+8. Publicações Feed, Reel, Story e Carrossel são idempotentes e auditáveis.
+9. Copiloto exige confirmação humana; modo autônomo exige política, orçamento,
+   escopo e kill switch explícitos.
+10. Token, conta, conteúdo, contato, conversa e insight pertencem a uma única
+    organização e não podem ser consultados entre tenants.
+
 ## IA
 
 1. IA não recebe credencial do provedor na UI nem no prompt.
