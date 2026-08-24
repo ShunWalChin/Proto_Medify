@@ -51,6 +51,9 @@ estado do produto; inventários em `reference/generated` são derivados do códi
 ## Operação e entrega
 
 - [Runbook](../08-OPERATIONS-RUNBOOK.md) — canônico.
+- [Compendium de produção 2026-08-24](operations/PRODUCTION-COMPENDIUM-2026-08-24.md).
+- [Acesso, credenciais e segredos](operations/ACCESS-AND-SECRETS.md).
+- [Incidente 2026-08-24: Nginx 502](operations/INCIDENT-2026-08-24-NGINX-502.md).
 - [Deploy, observabilidade e continuidade](operations/DEPLOY-OBSERVABILITY-DR.md).
 - [Troubleshooting e resposta a incidentes](operations/TROUBLESHOOTING-INCIDENTS.md).
 - [Processo de release](operations/RELEASE-PROCESS.md).

@@ -16,10 +16,12 @@
 | Serviço | Exposição |
 |---|---|
 | Nginx | `0.0.0.0:80/443` |
-| App Next.js | loopback |
-| Kong/Supabase API | loopback |
-| Pooler Postgres | loopback |
+| App Next.js | `127.0.0.1:4195->3000` |
+| Kong/Supabase API | `127.0.0.1:54451->8000`, `127.0.0.1:54444->8443` |
+| Pooler Postgres | `127.0.0.1:54452`, `127.0.0.1:54453` |
 | Redis, WAHA, worker | rede Docker |
+
+Redes em produção: `medify-app_internal` e `medify-supabase_default`.
 
 ## Deploy
 
@@ -43,6 +45,10 @@
 - versão e latência.
 
 Health não deve expor segredo, DSN ou detalhes internos.
+
+Em `2026-08-24`, o health público retornava `healthy` para Supabase, Redis e
+WAHA. O compendium operacional guarda o snapshot completo em
+[`PRODUCTION-COMPENDIUM-2026-08-24.md`](PRODUCTION-COMPENDIUM-2026-08-24.md).
 
 ## Sinais mínimos
 

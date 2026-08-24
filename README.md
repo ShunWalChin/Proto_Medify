@@ -12,11 +12,21 @@ governados.
 ## Acesso
 
 - Aplicação: <https://medify.64.181.178.125.nip.io>
+- App autenticado: <https://medify.64.181.178.125.nip.io/app>
+- Admin: <https://medify.64.181.178.125.nip.io/admin>
 - Health público: <https://medify.64.181.178.125.nip.io/api/v1/health>
+- API Supabase/Kong: <https://api-medify.64.181.178.125.nip.io>
 - Código-fonte da aplicação: mantido separadamente deste repositório documental.
 
 Credenciais, tokens, chaves e segredos operacionais **não pertencem a este
 repositório público**. Os acessos de homologação são entregues por canal seguro.
+
+## Produção atual
+
+O estado real de produção em `64.181.178.125` está documentado no
+[compendium de produção de 2026-08-24](docs/operations/PRODUCTION-COMPENDIUM-2026-08-24.md).
+Ele inclui links, containers, portas, redes, volumes, Nginx, Compose, scheduler,
+secret store, runbooks e riscos operacionais sem versionar valores sensíveis.
 
 ## Comece por aqui
 
@@ -29,6 +39,8 @@ repositório público**. Os acessos de homologação são entregues por canal se
 | Avaliar segurança e LGPD | [Segurança clínica](05-SECURITY-LGPD-CLINICAL.md) |
 | Planejar evolução | [Roadmap](06-ROADMAP.md) |
 | Operar produção | [Runbook](08-OPERATIONS-RUNBOOK.md) |
+| Ver produção real | [Compendium de produção](docs/operations/PRODUCTION-COMPENDIUM-2026-08-24.md) |
+| Tratar acessos | [Acesso e segredos](docs/operations/ACCESS-AND-SECRETS.md) |
 | Auditar a release | [Release 0.9 Beta-Final](09-RELEASE-0.9-BETA-FINAL.md) |
 | Treinar equipe | [Core business e capacitação](10-CORE-BUSINESS-AND-ENABLEMENT.md) |
 | Navegar toda a base | [Índice documental](docs/README.md) |
